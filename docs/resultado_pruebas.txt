@@ -1,0 +1,18 @@
+test_asociacion_rechaza_un_nombre_en_lugar_de_objeto (test_sistema.PruebasSistema.test_asociacion_rechaza_un_nombre_en_lugar_de_objeto) ... ok
+test_catalogo_relacionado_con_programas (test_sistema.PruebasSistema.test_catalogo_relacionado_con_programas) ... ok
+test_constructores_rechazan_datos_invalidos (test_sistema.PruebasSistema.test_constructores_rechazan_datos_invalidos) ... ok
+test_constructores_y_campos_requeridos (test_sistema.PruebasSistema.test_constructores_y_campos_requeridos) ... ok
+test_correo_invalido_conserva_dato_anterior (test_sistema.PruebasSistema.test_correo_invalido_conserva_dato_anterior) ... ok
+test_creditos_invalidos_conservan_dato_anterior (test_sistema.PruebasSistema.test_creditos_invalidos_conservan_dato_anterior) ... ok
+test_ejecucion_completa_informa_errores_y_continua (test_sistema.PruebasSistema.test_ejecucion_completa_informa_errores_y_continua) ... ok
+test_informacion_particular_y_actividades (test_sistema.PruebasSistema.test_informacion_particular_y_actividades) ... ok
+test_modificaciones_validas (test_sistema.PruebasSistema.test_modificaciones_validas) ... ok
+test_reglas_adicionales_y_limites (test_sistema.PruebasSistema.test_reglas_adicionales_y_limites) ... ok
+test_reporte_admite_una_nueva_subclase_sin_modificarse (test_sistema.PruebasSistema.test_reporte_admite_una_nueva_subclase_sin_modificarse) ... ok
+test_seis_personas_dos_por_tipo_y_herencia (test_sistema.PruebasSistema.test_seis_personas_dos_por_tipo_y_herencia) ... ok
+test_semestres_invalidos_conservan_dato_anterior (test_sistema.PruebasSistema.test_semestres_invalidos_conservan_dato_anterior) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.001s
+
+OK

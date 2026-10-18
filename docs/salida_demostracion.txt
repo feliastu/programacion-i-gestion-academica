@@ -1,0 +1,105 @@
+SISTEMA DE GESTIÓN ACADÉMICA
+Datos ficticios de demostración
+
+1. PROGRAMAS ACADÉMICOS Y ASIGNATURAS
+
+Programa: PAD - Ingeniería en Analítica de Datos
+Facultad: Ciencias e Ingenierías
+Número de semestres: 8 
+
+Programa: CON - Contaduría Pública
+Facultad: Ciencias Contables
+Número de semestres: 9 
+
+Asignatura: PROG1 - Programación I
+Número de créditos: 3
+Programa: Ingeniería en Analítica de Datos 
+
+Asignatura: EST1 - Estadística I
+Número de créditos: 3
+Programa: Ingeniería en Analítica de Datos 
+
+Asignatura: CONT1 - Contabilidad I
+Número de créditos: 4
+Programa: Contaduría Pública 
+
+2. MODIFICACIONES VÁLIDAS MEDIANTE MÉTODOS
+
+Correo anterior: ana@example.com
+Correo actualizado: ana.torres@example.com
+Semestres anteriores: 8
+Semestres actualizados: 9
+Créditos anteriores: 3
+Créditos actualizados: 4
+
+3. TRES INTENTOS DE MODIFICACIÓN INVÁLIDA
+
+RECHAZADO - correo vacío: El correo debe ser un texto no vacío.
+Correo conservado: ana.torres@example.com
+RECHAZADO - cero semestres: Los semestres: se requiere un número entero mayor que cero.
+Semestres conservados: 9
+RECHAZADO - créditos negativos: Los créditos: se requiere un número entero mayor que cero.
+Créditos conservados: 4
+
+4. REPORTE POLIMÓRFICO DE LAS SEIS PERSONAS
+
+ESTUDIANTE
+Identificación: E001
+Nombre: Ana Torres
+Correo: ana.torres@example.com
+Código estudiantil: EST001
+Programa: Ingeniería en Analítica de Datos
+Semestre: 2
+Promedio acumulado: 4.20
+Actividad principal: Ana Torres cursa Ingeniería en Analítica de Datos y se encuentra en el semestre 2.
+
+DOCENTE
+Identificación: D001
+Nombre: Laura Méndez
+Correo: laura@example.com
+Número de empleado: DOC001
+Facultad: Ciencias e Ingenierías
+Tipo de contratación: Tiempo completo
+Horas semanales: 40
+Actividad principal: Laura Méndez orienta clases en Ciencias e Ingenierías.
+
+ADMINISTRATIVO
+Identificación: A001
+Nombre: Diana López
+Correo: diana@example.com
+Número de empleado: ADM001
+Dependencia: Registro Académico
+Cargo: Coordinadora
+Jornada: Diurna
+Actividad principal: Diana López desempeña el cargo de Coordinadora en Registro Académico.
+
+ESTUDIANTE
+Identificación: E002
+Nombre: Carlos Ríos
+Correo: carlos@example.com
+Código estudiantil: EST002
+Programa: Contaduría Pública
+Semestre: 4
+Promedio acumulado: 4.50
+Actividad principal: Carlos Ríos cursa Contaduría Pública y se encuentra en el semestre 4.
+
+DOCENTE
+Identificación: D002
+Nombre: Julián Vega
+Correo: julian@example.com
+Número de empleado: DOC002
+Facultad: Ciencias Contables
+Tipo de contratación: Hora cátedra
+Horas semanales: 12
+Actividad principal: Julián Vega orienta clases en Ciencias Contables.
+
+ADMINISTRATIVO
+Identificación: A002
+Nombre: Andrés Mora
+Correo: andres@example.com
+Número de empleado: ADM002
+Dependencia: Biblioteca
+Cargo: Auxiliar
+Jornada: Mixta
+Actividad principal: Andrés Mora desempeña el cargo de Auxiliar en Biblioteca.
+
