@@ -1,43 +1,43 @@
-# Organización del equipo y entrega en GitHub
+# Trabajo individual y entrega en GitHub
 
 El entregable solicitado por el curso es el enlace al repositorio:
 [feliastu/programacion-i-gestion-academica](https://github.com/feliastu/programacion-i-gestion-academica).
+Esta entrega se realizará de manera individual por **Hernan Felipe Astudillo Peña**
+(`feliastu`). Se conserva el nombre oficial del curso: *Actividad colaborativa 1*.
+
 La base funcional y su documentación ya están publicadas para revisión. Antes de
-entregar faltan los aportes individuales, el acceso del docente y la etiqueta final.
+entregar faltan la revisión personal, el registro de aportes verificables, el
+acceso del docente y la etiqueta final.
 
-## Acordar las contribuciones
+## Organizar el trabajo individual
 
-El equipo está conformado por Camilo Arias Arias y Hernan Felipe Astudillo Peña.
-El usuario de GitHub de Hernan es `feliastu`; el de Camilo está pendiente de
-confirmación. La siguiente distribución es una propuesta para organizar el
-trabajo; no representa aportes ya realizados.
+El estudiante responsable revisará y comprenderá la totalidad del sistema:
 
-| Integrante | Responsabilidad propuesta | Aporte de desarrollo verificable |
-| --- | --- | --- |
-| Camilo Arias Arias | Persona, ProgramaAcademico, Asignatura y validaciones comunes | Identificar e implementar una mejora justificada del modelo o de la validación, con su prueba correspondiente |
-| Hernan Felipe Astudillo Peña | Estudiante, Docente, Administrativo, integración en main.py y documentación | Implementar una mejora justificada de un comportamiento o de la demostración integrada, con su prueba y explicación |
+1. Estudiar Persona, ProgramaAcademico, Asignatura y las validaciones comunes.
+2. Seguir la herencia y la sobreescritura en Estudiante, Docente y Administrativo.
+3. Ejecutar `main.py`, revisar las pruebas y explicar el ciclo polimórfico.
+4. Identificar una mejora o corrección justificada, implementarla y documentar
+   su resultado. Agregar o ajustar pruebas cuando el cambio de comportamiento
+   lo requiera.
+5. Registrar su aporte real con un commit y actualizar su referencia en el README.
 
-Ambos deben revisar las pruebas, comprobar el reporte polimórfico y comprender
-la totalidad del proyecto. Pueden ajustar esta distribución de común acuerdo.
-Cada uno debe efectuar su aporte desde su propia identidad de Git.
-No registrar commits con nombres ajenos,
-no crear commits vacíos y no dividir artificialmente un trabajo para simular
-participación. Un cambio cosmético o añadir un nombre no equivale a desarrollar.
+Esta lista organiza el trabajo pendiente; no representa aportes ya realizados.
+El historial debe reflejar el trabajo efectivo con la identidad del estudiante.
+Un cambio cosmético o añadir un nombre no equivale a un aporte de desarrollo.
 
 ## Acceder al repositorio
 
-El repositorio pertenece a `feliastu` y es privado. Hernan debe invitar al usuario
-confirmado de Camilo desde **Settings > Collaborators** para que pueda trabajar.
-Antes de la entrega, también debe asegurarse de que el docente tenga acceso.
-El documento de la actividad no exige que el repositorio sea público.
+El repositorio pertenece a `feliastu` y es privado. Antes de la entrega, comprobar
+que el docente tenga acceso para evaluarlo. El documento de la actividad no exige
+que el repositorio sea público.
 
 `main.py`, `README.md`, `modelos`, `pruebas` y `docs` se encuentran en la raíz.
 Las grabaciones de clase y el documento original no están incluidos.
 
 ## Obtener una copia para trabajar
 
-Cada integrante necesita Git instalado y autenticación con su propia cuenta.
-Desde una terminal en la carpeta donde quiera guardar el proyecto:
+Se necesita Git instalado y autenticación con la cuenta `feliastu`.
+Desde una terminal en la carpeta donde se quiera guardar el proyecto:
 
 ```bash
 git clone https://github.com/feliastu/programacion-i-gestion-academica.git
@@ -45,14 +45,14 @@ cd programacion-i-gestion-academica
 ```
 
 Si GitHub solicita autenticación, utilizar el flujo de inicio de sesión de Git
-o del administrador de credenciales instalado. No compartir contraseñas o tokens
-en el repositorio ni entre integrantes.
+o del administrador de credenciales instalado. No guardar contraseñas ni tokens
+en el repositorio.
 
-Configurar la identidad local con los datos del estudiante que realmente hará el
-commit. Reemplazar los textos de ejemplo por sus datos:
+Configurar la identidad local. Reemplazar el correo de ejemplo por uno asociado
+a la cuenta de GitHub, incluido el correo privado de GitHub si se prefiere:
 
 ```bash
-git config user.name "NOMBRE REAL DEL AUTOR"
+git config user.name "Hernan Felipe Astudillo Peña"
 git config user.email "CORREO ASOCIADO A SU CUENTA DE GITHUB"
 ```
 
@@ -64,15 +64,13 @@ py -m unittest discover -s pruebas -v
 ```
 
 La carga inicial con asistencia de IA no acredita por sí sola el desarrollo
-individual de los dos integrantes. La declaración de IA debe permanecer y los
-aportes posteriores deben ser reales.
+personal. La declaración de IA debe permanecer y los aportes posteriores deben
+ser reales.
 
-## Trabajar sobre la misma versión
+## Registrar una mejora propia
 
-Cada integrante obtiene una copia del repositorio, crea una rama para su tarea,
-realiza el cambio, ejecuta el programa y las pruebas, y registra un commit con
-un mensaje que describa el aporte. Integrar las ramas conservando la autoría de
-los commits individuales.
+Crear una rama para el cambio, editar los archivos, ejecutar el programa y las
+pruebas, y registrar un commit con un mensaje que describa el aporte.
 
 Ejemplo para un cambio real de validación, después de clonar el repositorio:
 
@@ -89,25 +87,25 @@ git push -u origin mejora-validacion
 ```
 
 Los archivos y el mensaje deben coincidir con lo que efectivamente se cambió.
-Revisar e integrar el aporte mediante una solicitud de cambios o el flujo que
-acuerde el equipo. No cambiar la autoría para repartir créditos.
+Revisar e integrar la rama mediante una solicitud de cambios en GitHub, o mediante
+el flujo de Git elegido, conservando la autoría real.
 
 ## Cerrar la versión de la actividad
 
-Completar integrantes y contribuciones en el README, comprobar que el docente
-puede acceder, ejecutar las pruebas y revisar el historial:
+Completar la contribución y el commit verificable del estudiante en el README,
+comprobar que el docente puede acceder, ejecutar las pruebas y revisar el historial:
 
 ```bash
 git log --format="%h | %an | %s"
 ```
 
-Cuando todos los aportes estén integrados y antes de la fecha límite, crear una
-etiqueta que identifique exactamente la versión entregada:
+Cuando los cambios estén integrados y antes de la fecha límite, crear una etiqueta
+que identifique exactamente la versión entregada:
 
 ```bash
 git switch main
 git pull --ff-only
-git tag -a actividad-1-v1.0 -m "Entrega de la actividad colaborativa 1"
+git tag -a actividad-1-v1.0 -m "Entrega individual de la actividad colaborativa 1"
 git push origin actividad-1-v1.0
 ```
 
@@ -119,16 +117,17 @@ También puede crearse una versión desde la sección **Releases** de GitHub y
 seleccionar la etiqueta del commit final. Para la siguiente actividad, continuar
 con nuevos commits posteriores, manteniendo intacta la etiqueta de esta entrega.
 
-## Verificación final del equipo
+## Verificación final individual
 
 - [ ] El repositorio contiene un solo sistema y un único `main.py` de ejecución.
 - [ ] Se ejecuta desde una copia recién descargada sin instalar paquetes externos.
 - [ ] Demuestra seis personas, tres rechazos y el ciclo polimórfico.
-- [ ] Los integrantes y el enlace del repositorio están completos en el README.
-- [ ] Cada estudiante tiene al menos un commit de desarrollo verificable.
+- [ ] El README identifica a Hernan Felipe Astudillo Peña como único estudiante responsable.
+- [ ] El enlace del repositorio y el aporte verificable están completos en el README.
+- [ ] El estudiante tiene al menos un commit de desarrollo verificable.
 - [ ] El README declara de manera fiel el uso de inteligencia artificial.
-- [ ] Todos pueden explicar el código y sus decisiones.
-- [ ] Las pruebas pasan después de integrar los aportes.
+- [ ] El estudiante puede explicar todo el código y sus decisiones.
+- [ ] Las pruebas pasan después de integrar los cambios.
 - [ ] La etiqueta identifica el commit final y el docente tiene acceso.
 
 Consultar las instrucciones oficiales de

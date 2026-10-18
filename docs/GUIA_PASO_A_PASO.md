@@ -1,7 +1,7 @@
 # Guía para comprender y explicar el proyecto
 
 Esta guía acompaña la primera versión funcional del Sistema de Gestión Académica.
-Su objetivo es que cada integrante pueda ejecutar el proyecto, seguir los datos
+Su objetivo es que el estudiante pueda ejecutar el proyecto, seguir los datos
 y explicar las decisiones del código. Conviene estudiar una fase a la vez sobre
 los mismos archivos; no es necesario crear cinco programas.
 
@@ -183,12 +183,13 @@ decidir qué comportamiento se espera y comprobarlo. Si se descubre una necesida
 real, implementar y documentar la solución. El commit debe reflejar ese trabajo,
 con su explicación y las pruebas que correspondan.
 
-No basta con ejecutar este paquete para acreditar el trabajo colaborativo.
-Cada estudiante debe comprenderlo y realizar un aporte comprobable.
+Para esta entrega individual, el estudiante debe comprender la totalidad del
+proyecto y realizar un aporte comprobable; ejecutarlo por sí solo no acredita
+ese desarrollo personal.
 
 ## 9 Preguntas para preparar la sustentación
 
-| Pregunta | Idea que debe poder explicar el integrante |
+| Pregunta | Idea que debe poder explicar el estudiante |
 | --- | --- |
 | ¿En qué se diferencian una clase y un objeto? | La clase define; el objeto tiene valores concretos |
 | ¿Qué función cumple __init__? | Inicializa los atributos de cada instancia |
@@ -199,7 +200,7 @@ Cada estudiante debe comprenderlo y realizar un aporte comprobable.
 | ¿Qué métodos se sobrescriben? | mostrar_informacion y realizar_actividad_principal |
 | ¿Dónde está el polimorfismo? | En el único ciclo de mostrar_reporte |
 | ¿Por qué el programa se guarda como objeto? | Para compartir la referencia y consultar sus datos actuales |
-| ¿Dónde se evidencia la participación? | En aportes reales y sus commits individuales |
+| ¿Dónde se evidencia el trabajo propio? | En aportes reales y sus commits |
 
 ## 10 Límites de esta versión
 

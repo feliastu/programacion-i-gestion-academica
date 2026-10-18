@@ -19,7 +19,7 @@ automatizadas finalizaron con resultado **OK**.
 
 En `salida_demostracion.txt` se conserva la salida real del programa. En
 `resultado_pruebas.txt` se conserva el resultado real de la suite. Son evidencias
-de esta versión inicial; deben regenerarse si el equipo cambia su comportamiento.
+de esta versión inicial; deben regenerarse si cambia el comportamiento del programa.
 
 ## Alcance de las pruebas automatizadas
 
@@ -57,7 +57,7 @@ El proyecto solo requiere Python y su biblioteca estándar.
 ## Condiciones que no acredita esta verificación
 
 Estas pruebas comprueban el funcionamiento de la propuesta de código. No
-acreditan que los integrantes hayan participado, comprendido la solución o
-realizado sus commits. Tampoco prueban la publicación en GitHub, el acceso del
+acreditan que el estudiante haya comprendido la solución, realizado su aporte
+personal o registrado sus commits. Tampoco prueban la publicación en GitHub, el acceso del
 docente o la creación de una etiqueta. Esas condiciones deben verificarse al
 cerrar la entrega, siguiendo `ENTREGA_GITHUB.md`.

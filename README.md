@@ -6,29 +6,30 @@ Primera versión funcional de un único sistema en Python que representa persona
 programas académicos y asignaturas. Las cinco fases se integran en las mismas
 clases y en un solo punto de entrada, `main.py`.
 
-**Estado:** primera versión funcional publicada para revisión y desarrollo del
-equipo. Antes de entregar deben completarse el usuario de GitHub de Camilo, las
-contribuciones individuales verificables y la etiqueta definitiva. La carga
-inicial con asistencia de IA no acredita por sí sola la participación de ambos.
+**Modalidad de entrega:** individual.
 
-## Integrantes
+**Estado:** primera versión funcional publicada para revisión y desarrollo
+individual. Antes de entregar deben completarse la revisión personal, el registro
+de aportes verificables y la etiqueta definitiva. La carga inicial con asistencia
+de IA no acredita por sí sola el desarrollo personal.
+
+## Estudiante responsable
 
 | Nombre | Usuario de GitHub | Contribución y commit verificable |
 | --- | --- | --- |
-| Camilo Arias Arias | Por confirmar | Por registrar después de su aporte real |
 | Hernan Felipe Astudillo Peña | feliastu | Por registrar después de su aporte real |
 
-El equipo está conformado por estos dos estudiantes. Cada integrante debe
-realizar al menos un commit con una contribución sustantiva al desarrollo;
-añadir únicamente su nombre no cumple esa condición. La propuesta de distribución
-de tareas para ambos se encuentra en `docs/ENTREGA_GITHUB.md`.
+Hernan Felipe Astudillo Peña es el único estudiante responsable de esta entrega.
+Debe realizar al menos un commit con una contribución sustantiva al desarrollo;
+añadir únicamente su nombre no cumple esa condición. La guía de trabajo
+individual se encuentra en `docs/ENTREGA_GITHUB.md`.
 
 Repositorio: [feliastu/programacion-i-gestion-academica](https://github.com/feliastu/programacion-i-gestion-academica).
 
-El repositorio es privado durante la revisión. Camilo y el docente necesitarán
-acceso antes de colaborar y evaluar, respectivamente.
+El repositorio es privado durante la revisión. Antes de entregar, el estudiante
+debe comprobar que el docente tenga acceso para evaluarlo.
 
-Etiqueta de entrega propuesta: `actividad-1-v1.0`. Se creará cuando el equipo
+Etiqueta de entrega propuesta: `actividad-1-v1.0`. Se creará cuando el estudiante
 termine la revisión y sus aportes; el documento no establece un nombre obligatorio.
 
 ## Ejecución
@@ -152,7 +153,7 @@ Como decisiones adicionales de esta propuesta:
 - Semestres, créditos, semestre del estudiante y horas semanales son enteros
   positivos. No se aceptan booleanos como números.
 - El promedio utiliza la escala de 0 a 5, adoptada para los ejemplos. El documento
-  no fija una escala; el equipo debe ajustar esta regla si el docente indica otra.
+  no fija una escala; el estudiante debe ajustar esta regla si el docente indica otra.
 - El programa de un estudiante o asignatura debe ser un objeto `ProgramaAcademico`.
 - No se valida el formato completo de un correo: la regla solicitada exige que
   no sea vacío. Tampoco se implementan reglas institucionales no suministradas,
@@ -172,11 +173,11 @@ redactar la documentación y revisar la ejecución. La asistencia incluyó la
 generación de la estructura y de la implementación inicial completa; no se limitó
 a correcciones de redacción.
 
-El equipo debe revisar, comprender, explicar y justificar la totalidad del código
-antes de entregarlo. La participación individual debe quedar respaldada por
-contribuciones reales y commits de cada estudiante. Esta declaración no acredita
-que esa revisión o participación ya se haya realizado. Actualizarla con el uso
-efectivo de otras herramientas y con las modificaciones hechas por el equipo.
+El estudiante responsable debe revisar, comprender, explicar y justificar la
+totalidad del código antes de entregarlo. Su trabajo debe quedar respaldado por
+contribuciones reales y commits propios. Esta declaración no acredita que esa
+revisión o contribución ya se haya realizado. Actualizarla con el uso efectivo
+de otras herramientas y con las modificaciones hechas por el estudiante.
 
 ## Fuentes de referencia
 
