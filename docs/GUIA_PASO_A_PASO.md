@@ -167,13 +167,27 @@ séptima persona del ejemplo ni una clase adicional exigida por la actividad.
    cuatro créditos. Se muestran los valores anteriores y los nuevos.
 4. Se intenta reemplazar el correo por `""`, los semestres por `0` y los créditos
    por `-2`. Se muestran tres mensajes de rechazo y los valores conservados.
-5. Se recorren las seis personas. Cada una presenta sus datos y su actividad.
+5. Se actualiza el primer estudiante a semestre 3 y promedio 4.6 mediante
+   `actualizar_avance_academico()`. Se intenta luego guardar semestre 4 y promedio
+   5.5. La operación se rechaza y se conservan semestre 3 y promedio 4.6.
+6. Se recorren las seis personas. Cada una presenta sus datos y su actividad;
+   el primer estudiante refleja su avance actualizado.
 
 `try` contiene una operación que puede fallar; `except ValueError as error`
 recibe el error previsto y permite informar el motivo. No se utiliza un `except`
 genérico que oculte cualquier problema de programación.
 
-## 8 Verificar y registrar cambios propios
+## 8 Comprender el aporte y verificar cambios
+
+La mejora incorporada es `Estudiante.actualizar_avance_academico()`, descrita en
+[APORTE_INDIVIDUAL.md](APORTE_INDIVIDUAL.md). Leer el método y observar que primero
+valida el semestre y el promedio en variables locales. Solo después asigna los
+dos atributos privados. Si una validación lanza `ValueError`, no se alcanza
+ninguna asignación y el objeto conserva su estado.
+
+La mejora fue implementada con asistencia de IA. Para preparar la sustentación,
+seguir el caso válido y el caso rechazado de la sección 4 de `main.py`, y explicar
+por qué el semestre tampoco cambia cuando falla únicamente el promedio.
 
 Antes de modificar el código, ejecutar `py main.py` y las pruebas. Después de un
 cambio, repetir ambos comandos y revisar el resultado.
@@ -184,8 +198,7 @@ real, implementar y documentar la solución. El commit debe reflejar ese trabajo
 con su explicación y las pruebas que correspondan.
 
 Para esta entrega individual, el estudiante debe comprender la totalidad del
-proyecto y realizar un aporte comprobable; ejecutarlo por sí solo no acredita
-ese desarrollo personal.
+proyecto y registrar con precisión los cambios que realice y la ayuda utilizada.
 
 ## 9 Preguntas para preparar la sustentación
 
@@ -200,7 +213,8 @@ ese desarrollo personal.
 | ¿Qué métodos se sobrescriben? | mostrar_informacion y realizar_actividad_principal |
 | ¿Dónde está el polimorfismo? | En el único ciclo de mostrar_reporte |
 | ¿Por qué el programa se guarda como objeto? | Para compartir la referencia y consultar sus datos actuales |
-| ¿Dónde se evidencia el trabajo propio? | En aportes reales y sus commits |
+| ¿Por qué validar antes de asignar los dos datos? | Evita que una validación fallida deje una actualización incompleta |
+| ¿Dónde está registrado el aporte? | En el commit enlazado en el README y en APORTE_INDIVIDUAL.md, con la asistencia utilizada |
 
 ## 10 Límites de esta versión
 

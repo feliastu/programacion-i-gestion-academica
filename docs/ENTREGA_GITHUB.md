@@ -5,9 +5,11 @@ El entregable solicitado por el curso es el enlace al repositorio:
 Esta entrega se realizará de manera individual por **Hernan Felipe Astudillo Peña**
 (`feliastu`). Se conserva el nombre oficial del curso: *Actividad colaborativa 1*.
 
-La base funcional y su documentación ya están publicadas para revisión. Antes de
-entregar faltan la revisión personal, el registro de aportes verificables, el
-acceso del docente y la etiqueta final.
+El sistema incluye el aporte de actualización conjunta de semestre y promedio,
+su demostración y 16 pruebas correctas. La implementación con asistencia de IA
+está registrada en el commit enlazado en el README y explicada en
+[APORTE_INDIVIDUAL.md](APORTE_INDIVIDUAL.md). Antes de entregar quedan la revisión
+y sustentación personal, el acceso del docente y la etiqueta final.
 
 ## Organizar el trabajo individual
 
@@ -16,14 +18,13 @@ El estudiante responsable revisará y comprenderá la totalidad del sistema:
 1. Estudiar Persona, ProgramaAcademico, Asignatura y las validaciones comunes.
 2. Seguir la herencia y la sobreescritura en Estudiante, Docente y Administrativo.
 3. Ejecutar `main.py`, revisar las pruebas y explicar el ciclo polimórfico.
-4. Identificar una mejora o corrección justificada, implementarla y documentar
-   su resultado. Agregar o ajustar pruebas cuando el cambio de comportamiento
-   lo requiera.
-5. Registrar su aporte real con un commit y actualizar su referencia en el README.
+4. Seguir el método `actualizar_avance_academico()` y explicar cómo conserva los
+   dos datos cuando una validación falla.
+5. Repetir la demostración y las pruebas en su computador. Si realiza nuevos
+   cambios, registrarlos con su explicación y actualizar la documentación.
 
-Esta lista organiza el trabajo pendiente; no representa aportes ya realizados.
-El historial debe reflejar el trabajo efectivo con la identidad del estudiante.
-Un cambio cosmético o añadir un nombre no equivale a un aporte de desarrollo.
+La implementación y sus pruebas están registradas. Esta lista orienta la revisión
+personal pendiente y no certifica que ya se haya realizado.
 
 ## Acceder al repositorio
 
@@ -63,11 +64,10 @@ py main.py
 py -m unittest discover -s pruebas -v
 ```
 
-La carga inicial con asistencia de IA no acredita por sí sola el desarrollo
-personal. La declaración de IA debe permanecer y los aportes posteriores deben
-ser reales.
+La declaración de IA describe la asistencia utilizada tanto en la versión inicial
+como en la mejora. Actualizarla si cambia el alcance de la ayuda recibida.
 
-## Registrar una mejora propia
+## Registrar cambios posteriores
 
 Crear una rama para el cambio, editar los archivos, ejecutar el programa y las
 pruebas, y registrar un commit con un mensaje que describa el aporte.
@@ -92,8 +92,9 @@ el flujo de Git elegido, conservando la autoría real.
 
 ## Cerrar la versión de la actividad
 
-Completar la contribución y el commit verificable del estudiante en el README,
-comprobar que el docente puede acceder, ejecutar las pruebas y revisar el historial:
+Comprobar que la descripción del aporte y su commit en el README correspondan a
+la versión entregada, que el docente pueda acceder y que las pruebas pasen.
+Revisar el historial:
 
 ```bash
 git log --format="%h | %an | %s"
@@ -119,15 +120,15 @@ con nuevos commits posteriores, manteniendo intacta la etiqueta de esta entrega.
 
 ## Verificación final individual
 
-- [ ] El repositorio contiene un solo sistema y un único `main.py` de ejecución.
+- [x] El repositorio contiene un solo sistema y un único `main.py` de ejecución.
 - [ ] Se ejecuta desde una copia recién descargada sin instalar paquetes externos.
-- [ ] Demuestra seis personas, tres rechazos y el ciclo polimórfico.
-- [ ] El README identifica a Hernan Felipe Astudillo Peña como único estudiante responsable.
-- [ ] El enlace del repositorio y el aporte verificable están completos en el README.
-- [ ] El estudiante tiene al menos un commit de desarrollo verificable.
-- [ ] El README declara de manera fiel el uso de inteligencia artificial.
+- [x] Demuestra seis personas, cuatro rechazos y el ciclo polimórfico.
+- [x] El README identifica a Hernan Felipe Astudillo Peña como único estudiante responsable.
+- [x] El enlace del repositorio y el aporte técnico verificable están completos en el README.
+- [x] La mejora está registrada en un commit con la asistencia de IA declarada.
+- [x] El README declara el alcance de la asistencia de inteligencia artificial.
 - [ ] El estudiante puede explicar todo el código y sus decisiones.
-- [ ] Las pruebas pasan después de integrar los cambios.
+- [x] Las 16 pruebas pasan después de integrar los cambios.
 - [ ] La etiqueta identifica el commit final y el docente tiene acceso.
 
 Consultar las instrucciones oficiales de

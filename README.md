@@ -8,21 +8,20 @@ clases y en un solo punto de entrada, `main.py`.
 
 **Modalidad de entrega:** individual.
 
-**Estado:** primera versión funcional publicada para revisión y desarrollo
-individual. Antes de entregar deben completarse la revisión personal, el registro
-de aportes verificables y la etiqueta definitiva. La carga inicial con asistencia
-de IA no acredita por sí sola el desarrollo personal.
+**Estado:** versión funcional con una mejora para actualizar el avance académico
+y 16 pruebas automatizadas correctas. Antes de entregar quedan la revisión y
+sustentación personal, la comprobación del acceso del docente y la etiqueta final.
 
 ## Estudiante responsable
 
 | Nombre | Usuario de GitHub | Contribución y commit verificable |
 | --- | --- | --- |
-| Hernan Felipe Astudillo Peña | feliastu | Por registrar después de su aporte real |
+| Hernan Felipe Astudillo Peña | feliastu | Actualización conjunta de semestre y promedio, demostración y pruebas, con asistencia de IA. [Commit 0f2c576](https://github.com/feliastu/programacion-i-gestion-academica/commit/0f2c5765fe07b454053a7a858b5e7a558adfe195) |
 
 Hernan Felipe Astudillo Peña es el único estudiante responsable de esta entrega.
-Debe realizar al menos un commit con una contribución sustantiva al desarrollo;
-añadir únicamente su nombre no cumple esa condición. La guía de trabajo
-individual se encuentra en `docs/ENTREGA_GITHUB.md`.
+El aporte técnico está explicado en [Aporte individual](docs/APORTE_INDIVIDUAL.md).
+La guía de trabajo y cierre de la entrega se encuentra en
+[Entrega en GitHub](docs/ENTREGA_GITHUB.md).
 
 Repositorio: [feliastu/programacion-i-gestion-academica](https://github.com/feliastu/programacion-i-gestion-academica).
 
@@ -52,8 +51,9 @@ macOS o Linux, normalmente se utiliza `python3 main.py`.
 
 La demostración es automática: crea dos programas, tres asignaturas y seis
 personas; consulta sus datos; realiza tres modificaciones válidas; rechaza tres
-modificaciones inválidas; y termina con el reporte polimórfico. No solicita datos
-por teclado y no requiere conexión a internet.
+modificaciones inválidas; demuestra la actualización conjunta de semestre y
+promedio, con un cuarto rechazo; y termina con el reporte polimórfico. No solicita
+datos por teclado y no requiere conexión a internet.
 
 Para ejecutar las pruebas en Windows:
 
@@ -61,7 +61,7 @@ Para ejecutar las pruebas en Windows:
 py -m unittest discover -s pruebas -v
 ```
 
-Resultado de referencia: **13 pruebas, OK**. En otros sistemas, reemplazar `py`
+Resultado de referencia: **16 pruebas, OK**. En otros sistemas, reemplazar `py`
 por el comando de Python instalado.
 
 ## Archivos del proyecto
@@ -80,6 +80,7 @@ por el comando de Python instalado.
 | `pruebas/test_sistema.py` | Pruebas automatizadas que reutilizan el sistema |
 | `pruebas/__init__.py` | Identifica el paquete de pruebas |
 | `docs/GUIA_PASO_A_PASO.md` | Explicación del diseño y preparación para sustentarlo |
+| `docs/APORTE_INDIVIDUAL.md` | Mejora del avance académico, evidencia y explicación |
 | `docs/ENTREGA_GITHUB.md` | Organización del trabajo, publicación y etiqueta |
 | `docs/PRUEBAS.md` | Matriz de aceptación y resultado de la verificación |
 | `docs/salida_demostracion.txt` | Salida real de la ejecución de referencia |
@@ -126,6 +127,17 @@ Python selecciona el método del objeto real. Este ciclo no utiliza `if`,
 las validaciones y las comprobaciones de la suite de pruebas tienen otra función;
 no seleccionan comportamientos en el reporte.
 
+## Mejora: actualización del avance académico
+
+`Estudiante.actualizar_avance_academico(semestre, promedio)` permite actualizar
+los dos datos en una sola operación. Primero valida ambos valores y después
+modifica los atributos privados. Si un valor es inválido, conserva los dos datos
+anteriores. Utiliza las mismas reglas de los setters individuales.
+
+Por ejemplo, después de guardar semestre 3 y promedio 4.6, un intento de cambiar
+a semestre 4 y promedio 5.5 se rechaza por el promedio. El semestre permanece en 3.
+Esta operación se demuestra en `main.py` y tiene tres pruebas específicas.
+
 ## Cumplimiento de las cinco fases
 
 | Fase | Implementación en este mismo proyecto |
@@ -167,17 +179,14 @@ porque no son requisitos de esta primera actividad.
 
 ## Declaración de uso de inteligencia artificial
 
-Esta versión inicial se elaboró con apoyo de **ChatGPT de OpenAI** para analizar
-los requisitos, proponer el diseño, generar el código Python y las pruebas,
-redactar la documentación y revisar la ejecución. La asistencia incluyó la
-generación de la estructura y de la implementación inicial completa; no se limitó
-a correcciones de redacción.
+Se utilizó **ChatGPT de OpenAI** para analizar los requisitos, proponer el diseño
+y generar la implementación inicial completa, las pruebas y la documentación.
+También se utilizó para proponer e implementar la actualización conjunta de
+semestre y promedio, probarla y documentarla a solicitud del estudiante.
 
-El estudiante responsable debe revisar, comprender, explicar y justificar la
-totalidad del código antes de entregarlo. Su trabajo debe quedar respaldado por
-contribuciones reales y commits propios. Esta declaración no acredita que esa
-revisión o contribución ya se haya realizado. Actualizarla con el uso efectivo
-de otras herramientas y con las modificaciones hechas por el estudiante.
+La revisión, comprensión y sustentación del código corresponden al estudiante.
+El registro del cambio acredita la implementación asistida; no certifica que la
+revisión personal ya se haya realizado.
 
 ## Fuentes de referencia
 
