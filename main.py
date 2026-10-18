@@ -93,7 +93,23 @@ def main():
         print("RECHAZADO - créditos negativos:", error)
     print("Créditos conservados:", asignaturas[0].get_creditos())
 
-    print("\n4. REPORTE POLIMÓRFICO DE LAS SEIS PERSONAS\n")
+    print("\n4. ACTUALIZACIÓN CONJUNTA DEL AVANCE ACADÉMICO\n")
+    estudiante = personas[0]
+    print("Avance anterior:", estudiante.get_semestre(),
+          "| Promedio:", estudiante.get_promedio())
+    estudiante.actualizar_avance_academico(3, 4.6)
+    print("Avance actualizado:", estudiante.get_semestre(),
+          "| Promedio:", estudiante.get_promedio())
+
+    # El semestre 4 es válido, pero el promedio 5.5 invalida toda la operación.
+    try:
+        estudiante.actualizar_avance_academico(4, 5.5)
+    except ValueError as error:
+        print("RECHAZADO - actualización conjunta:", error)
+    print("Avance conservado:", estudiante.get_semestre(),
+          "| Promedio:", estudiante.get_promedio())
+
+    print("\n5. REPORTE POLIMÓRFICO DE LAS SEIS PERSONAS\n")
     mostrar_reporte(personas)
 
 

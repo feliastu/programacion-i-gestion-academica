@@ -1,3 +1,6 @@
+test_actualizacion_conjunta_acepta_valores_validos_y_limites (test_sistema.PruebasSistema.test_actualizacion_conjunta_acepta_valores_validos_y_limites) ... ok
+test_actualizacion_conjunta_rechaza_promedio_sin_cambiar_semestre (test_sistema.PruebasSistema.test_actualizacion_conjunta_rechaza_promedio_sin_cambiar_semestre) ... ok
+test_actualizacion_conjunta_rechaza_semestre_sin_cambiar_datos (test_sistema.PruebasSistema.test_actualizacion_conjunta_rechaza_semestre_sin_cambiar_datos) ... ok
 test_asociacion_rechaza_un_nombre_en_lugar_de_objeto (test_sistema.PruebasSistema.test_asociacion_rechaza_un_nombre_en_lugar_de_objeto) ... ok
 test_catalogo_relacionado_con_programas (test_sistema.PruebasSistema.test_catalogo_relacionado_con_programas) ... ok
 test_constructores_rechazan_datos_invalidos (test_sistema.PruebasSistema.test_constructores_rechazan_datos_invalidos) ... ok
@@ -13,6 +16,6 @@ test_seis_personas_dos_por_tipo_y_herencia (test_sistema.PruebasSistema.test_sei
 test_semestres_invalidos_conservan_dato_anterior (test_sistema.PruebasSistema.test_semestres_invalidos_conservan_dato_anterior) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 0.001s
+Ran 16 tests in 0.001s
 
 OK

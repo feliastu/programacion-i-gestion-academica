@@ -44,6 +44,18 @@ class Estudiante(Persona):
     def set_promedio(self, promedio):
         self.__promedio = validar_promedio(promedio)
 
+    def actualizar_avance_academico(self, semestre, promedio):
+        """Actualiza ambos datos solo cuando los dos valores son válidos.
+
+        Si alguna validación falla, conserva el semestre y el promedio previos.
+        Reutiliza las mismas reglas de los setters individuales.
+        """
+        nuevo_semestre = validar_entero_positivo(semestre, "El semestre")
+        nuevo_promedio = validar_promedio(promedio)
+        # Ningún atributo cambia hasta terminar las dos validaciones.
+        self.__semestre = nuevo_semestre
+        self.__promedio = nuevo_promedio
+
     def mostrar_informacion(self):
         """Sobrescribe el método y amplía los datos obtenidos de Persona."""
         return (f"ESTUDIANTE\n{super().mostrar_informacion()}\n"

@@ -130,6 +130,43 @@ class PruebasSistema(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.personas[2].set_cargo(" ")
 
+    def test_actualizacion_conjunta_acepta_valores_validos_y_limites(self):
+        estudiante = self.personas[0]
+        for semestre, promedio in ((3, 4.6), (1, 0), (8, 5)):
+            with self.subTest(semestre=semestre, promedio=promedio):
+                estudiante.actualizar_avance_academico(semestre, promedio)
+                self.assertEqual(estudiante.get_semestre(), semestre)
+                self.assertEqual(estudiante.get_promedio(), promedio)
+                self.assertIn(f"Semestre: {semestre}",
+                              estudiante.mostrar_informacion())
+                self.assertIn(f"Promedio acumulado: {promedio:.2f}",
+                              estudiante.mostrar_informacion())
+
+    def test_actualizacion_conjunta_rechaza_semestre_sin_cambiar_datos(self):
+        estudiante = self.personas[0]
+        anterior = (estudiante.get_semestre(), estudiante.get_promedio())
+        for semestre in (0, -1, 2.5, "3", True, None):
+            with self.subTest(semestre=semestre):
+                with self.assertRaises(ValueError):
+                    estudiante.actualizar_avance_academico(semestre, 4.6)
+                self.assertEqual(
+                    (estudiante.get_semestre(), estudiante.get_promedio()),
+                    anterior,
+                )
+
+    def test_actualizacion_conjunta_rechaza_promedio_sin_cambiar_semestre(self):
+        estudiante = self.personas[0]
+        anterior = (estudiante.get_semestre(), estudiante.get_promedio())
+        for promedio in (-0.1, 5.5, True, "4.6", None, float("nan"),
+                         float("inf"), float("-inf")):
+            with self.subTest(promedio=promedio):
+                with self.assertRaises(ValueError):
+                    estudiante.actualizar_avance_academico(3, promedio)
+                self.assertEqual(
+                    (estudiante.get_semestre(), estudiante.get_promedio()),
+                    anterior,
+                )
+
     def test_informacion_particular_y_actividades(self):
         estudiante, docente, administrativo = self.personas[:3]
         for campo in ("E001", "Ana Torres", "ana@example.com", "EST001",
@@ -172,10 +209,15 @@ class PruebasSistema(unittest.TestCase):
         with redirect_stdout(salida):
             main()
         resultado = salida.getvalue()
-        self.assertEqual(resultado.count("RECHAZADO -"), 3)
+        self.assertEqual(resultado.count("RECHAZADO -"), 4)
         self.assertIn("Correo conservado: ana.torres@example.com", resultado)
         self.assertIn("Semestres conservados: 9", resultado)
         self.assertIn("Créditos conservados: 4", resultado)
+        self.assertIn("Avance anterior: 2 | Promedio: 4.2", resultado)
+        self.assertIn("Avance actualizado: 3 | Promedio: 4.6", resultado)
+        self.assertIn("Avance conservado: 3 | Promedio: 4.6", resultado)
+        self.assertIn("Semestre: 3\nPromedio acumulado: 4.60", resultado)
+        self.assertIn("y se encuentra en el semestre 3.", resultado)
         self.assertEqual(resultado.count("Actividad principal:"), 6)
         self.assertEqual(resultado.count("ESTUDIANTE\n"), 2)
         self.assertEqual(resultado.count("DOCENTE\n"), 2)

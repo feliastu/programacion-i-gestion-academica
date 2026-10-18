@@ -41,7 +41,14 @@ Semestres conservados: 9
 RECHAZADO - créditos negativos: Los créditos: se requiere un número entero mayor que cero.
 Créditos conservados: 4
 
-4. REPORTE POLIMÓRFICO DE LAS SEIS PERSONAS
+4. ACTUALIZACIÓN CONJUNTA DEL AVANCE ACADÉMICO
+
+Avance anterior: 2 | Promedio: 4.2
+Avance actualizado: 3 | Promedio: 4.6
+RECHAZADO - actualización conjunta: El promedio debe ser un número entre 0 y 5.
+Avance conservado: 3 | Promedio: 4.6
+
+5. REPORTE POLIMÓRFICO DE LAS SEIS PERSONAS
 
 ESTUDIANTE
 Identificación: E001
@@ -49,9 +56,9 @@ Nombre: Ana Torres
 Correo: ana.torres@example.com
 Código estudiantil: EST001
 Programa: Ingeniería en Analítica de Datos
-Semestre: 2
-Promedio acumulado: 4.20
-Actividad principal: Ana Torres cursa Ingeniería en Analítica de Datos y se encuentra en el semestre 2.
+Semestre: 3
+Promedio acumulado: 4.60
+Actividad principal: Ana Torres cursa Ingeniería en Analítica de Datos y se encuentra en el semestre 3.
 
 DOCENTE
 Identificación: D001
