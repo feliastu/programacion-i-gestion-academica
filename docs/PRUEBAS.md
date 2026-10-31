@@ -1,69 +1,58 @@
-# Verificación del sistema y del aporte
+# Verificación de la segunda entrega
 
-La versión con el aporte se verificó el 18 de octubre de 2026 con Python 3.12.14.
-La ejecución de `main.py` terminó sin errores no controlados y las 16 pruebas
-automatizadas finalizaron con resultado **OK**.
+El 31 de octubre de 2026 se ejecutaron `main.py` y la suite completa con Python
+3.12.14. La demostración terminó correctamente y **las 42 pruebas pasaron**:
+16 pruebas del sistema anterior, adaptadas a Persona abstracta, y 26 de AC2.
 
-## Pruebas mínimas solicitadas
+## Correspondencia con las pruebas mínimas
 
-| Requisito | Evidencia observada |
+| Caso solicitado | Evidencia en la demostración |
 | --- | --- |
-| Crear programas y asignaturas | Dos programas y tres asignaturas asociados por referencias a objetos |
-| Crear al menos seis personas | Dos estudiantes, dos docentes y dos administrativos |
-| Consultar la información | Catálogo y reporte con los datos de los objetos |
-| Modificar datos encapsulados | Correo actualizado, semestres de 8 a 9 y créditos de 3 a 4 |
-| Intentar tres valores inválidos | Correo vacío, cero semestres y créditos negativos |
-| Conservar datos válidos | Se mantienen el correo actualizado, los 9 semestres y los 4 créditos |
-| Presentar cada tipo de persona | Cada rol muestra datos generales y sus cuatro campos particulares |
-| Recorrer polimórficamente | Un ciclo llama los dos métodos para las seis personas |
-| Actualizar el avance académico | Semestre y promedio cambian juntos a 3 y 4.6 |
-| Rechazar una actualización conjunta inválida | El intento de semestre 4 y promedio 5.5 conserva ambos valores anteriores |
+| Prohibir la creación directa de Persona | Se captura TypeError en la sección 6 |
+| Crear objetos relacionados | Se reutilizan las asignaturas, docentes y estudiantes de AC1 |
+| Crear al menos dos grupos | PROG1-A y PROG1-B, con docentes y horarios propios |
+| Matricular correctamente | EST001 en PROG1-A y EST002 en PROG1-B |
+| Rechazar duplicados | EST001 intenta matricularse nuevamente en PROG1-A |
+| Rechazar capacidad excedida | EST002 intenta ingresar a PROG1-A, cuya capacidad es 1 |
+| Retirar correctamente | Se retira EST001 de PROG1-A y se libera un cupo |
+| Rechazar retiro inexistente | EST999 no pertenece a PROG1-A |
+| Buscar asignatura inexistente | ASIG999 produce AsignaturaNoEncontradaError |
+| Buscar programa inexistente | PROG999 produce ProgramaNoEncontradoError |
+| Continuar después de las excepciones | Mensajes CONTINÚA, búsquedas válidas y estado final de ambos grupos |
 
-En `salida_demostracion.txt` se conserva la salida real del programa. En
-`resultado_pruebas.txt` se conserva el resultado real de la suite. Son evidencias
-de esta versión con el aporte; deben regenerarse si cambia el comportamiento del programa.
+Al terminar, PROG1-A tiene a EST002 y cero cupos libres; PROG1-B tiene al mismo
+objeto EST002 y un cupo libre. La regla de duplicados se aplica por grupo; no se
+ha establecido una restricción de matrícula entre grupos.
 
-## Alcance de las pruebas automatizadas
+## Qué comprueban las pruebas
 
-1. Asociación de asignaturas y estudiantes con programas y propagación de un
-   cambio de nombre a través de la referencia compartida.
-2. Composición de la lista con dos personas de cada rol y herencia de Persona.
-3. Inicialización y consulta de los campos de los constructores.
-4. Modificación válida de correo, semestres y créditos.
-5. Rechazo de correos inválidos sin perder el valor anterior.
-6. Rechazo de semestres inválidos sin perder el valor anterior.
-7. Rechazo de créditos inválidos sin perder el valor anterior.
-8. Rechazo de datos inválidos durante la construcción.
-9. Rechazo de un nombre de programa cuando se requiere el objeto asociado.
-10. Reglas adicionales de promedio, semestre, horas y textos.
-11. Datos particulares y actividades diferentes de los tres roles.
-12. Admisión de una subclase nueva por el reporte sin modificarlo.
-13. Ejecución integrada: cuatro rechazos controlados, avance académico conservado
-    y seis actividades finales.
-14. Actualización conjunta válida, incluidos los límites 0 y 5 del promedio.
-15. Rechazo de un semestre inválido sin modificar ninguno de los dos datos.
-16. Rechazo de un promedio inválido sin modificar ninguno de los dos datos,
-    incluidos valores fuera de rango, tipos incorrectos y números no finitos.
+La suite conserva la validación de datos, herencia, sobreescritura, referencias
+compartidas, avance académico y el reporte polimórfico de AC1. Las nuevas pruebas
+comprueban el contrato abstracto, los tres roles concretos, asociaciones reales,
+horarios independientes y válidos, reemplazo seguro del horario, matrículas por
+código, capacidad, retiro, consulta, búsquedas y continuidad de la demostración.
 
-Además se inspeccionó la estructura del código: los datos de instancia están
-encapsulados, las tres subclases redefinen ambos métodos y el reporte contiene
-un único ciclo sin condiciones que seleccionen por tipo.
+Los rechazos se comprueban tanto por su excepción como por el estado posterior:
+una matrícula fallida no altera la lista ni los cupos y un horario inválido no
+reemplaza el anterior. La copia de la lista de estudiantes protege la colección
+interna. Un cambio en la asignatura compartida se observa desde ambos grupos.
 
-## Comandos para repetir la verificación
+`test_sistema.py` contiene 16 métodos de prueba y `test_ac2.py` contiene 26.
+Varios métodos incluyen subcasos para límites, tipos incorrectos y datos vacíos.
 
-Desde la carpeta que contiene `main.py`:
+## Reproducir el resultado
+
+Desde la carpeta de `main.py`, en Windows:
 
 ```powershell
 py main.py
 py -m unittest discover -s pruebas -v
 ```
 
-En macOS o Linux, utilizar `python3` en lugar de `py` cuando corresponda.
-El proyecto solo requiere Python y su biblioteca estándar.
+En Linux o macOS usar `python3` cuando corresponda. No hay paquetes externos.
 
-## Condiciones que no acredita esta verificación
+- [Salida real de la demostración](salida_demostracion.txt).
+- [Salida real de las 42 pruebas](resultado_pruebas.txt).
 
-Estas pruebas comprueban el funcionamiento del código y de la mejora asistida.
-No acreditan la comprensión o sustentación personal del estudiante, el acceso
-del docente ni la creación de una etiqueta. El commit del aporte está enlazado
-en el README. Las condiciones de cierre se revisan en `ENTREGA_GITHUB.md`.
+Las pruebas verifican el comportamiento del sistema; la revisión y explicación
+personal del estudiante se preparan con [la guía](GUIA_PASO_A_PASO.md).

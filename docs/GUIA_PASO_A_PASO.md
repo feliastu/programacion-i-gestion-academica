@@ -1,6 +1,6 @@
 # Guía para comprender y explicar el proyecto
 
-Esta guía acompaña la primera versión funcional del Sistema de Gestión Académica.
+Esta guía acompaña la evolución del Sistema de Gestión Académica de AC1 a AC2.
 Su objetivo es que el estudiante pueda ejecutar el proyecto, seguir los datos
 y explicar las decisiones del código. Conviene estudiar una fase a la vez sobre
 los mismos archivos; no es necesario crear cinco programas.
@@ -9,7 +9,7 @@ los mismos archivos; no es necesario crear cinco programas.
 
 | Clase | Información propia | Relación |
 | --- | --- | --- |
-| Persona | Identificación, nombre y correo | Clase base |
+| Persona | Identificación, nombre y correo | Clase base abstracta |
 | ProgramaAcademico | Código, nombre, facultad y semestres | Se relaciona con asignaturas y estudiantes |
 | Asignatura | Código, nombre, créditos y programa | Tiene un ProgramaAcademico |
 | Estudiante | Código estudiantil, programa, semestre y promedio | Es una Persona |
@@ -216,10 +216,41 @@ proyecto y registrar con precisión los cambios que realice y la ayuda utilizada
 | ¿Por qué validar antes de asignar los dos datos? | Evita que una validación fallida deje una actualización incompleta |
 | ¿Dónde está registrado el aporte? | En el commit enlazado en el README y en APORTE_INDIVIDUAL.md, con la asistencia utilizada |
 
-## 10 Límites de esta versión
+## 10 Seguir la ampliación de AC2
+
+En `Persona`, localizar `ABC` y `@abstractmethod`. El constructor común sigue
+siendo utilizado por `super()`, pero una Persona sin rol concreto no puede
+crearse. Una subclase que omita `realizar_actividad_principal()` tampoco puede
+instanciarse. Las tres subclases existentes ya implementan este método.
+
+En `GrupoAcademico.__init__`, distinguir los objetos recibidos de los creados:
+asignatura y docente llegan como referencias; la lista de estudiantes empieza
+vacía; el horario se construye con `Horario(...)`. Esa creación interna evidencia
+la composición. `cambiar_horario()` también construye el reemplazo antes de asignar.
+
+Seguir `matricular_estudiante()` con una lista vacía, un duplicado y un grupo
+lleno. El método valida primero y añade al final. Comparar con
+`retirar_estudiante()`: busca un código, elimina una referencia y devuelve el
+objeto retirado; si no lo encuentra, lanza una excepción específica.
+
+Revisar las cinco clases de `excepciones.py`, localizar cada `raise` y luego su
+`except` en `main.py`. Después de cada captura, identificar la siguiente operación
+que se ejecuta. El mensaje final demuestra que la ejecución llegó al cierre.
+
+`CatalogoAcademico` busca en las mismas referencias a programas y asignaturas.
+Una búsqueda válida devuelve el objeto existente; un código ausente produce la
+excepción correspondiente. No se crea otro sistema para hacer estas búsquedas.
+
+Ejecutar `py -m unittest discover -s pruebas -v`: deben finalizar **42 pruebas**
+con `OK`. Consultar [PRUEBAS.md](PRUEBAS.md) para relacionarlas con el enunciado.
+
+Para practicar, explicar qué cambia en la lista y los cupos tras cada operación,
+por qué cada grupo tiene un horario diferente y por qué el ciclo polimórfico
+puede seguir funcionando después de convertir Persona en abstracta.
+
+## 11 Límites de esta versión
 
 El sistema demuestra el modelo de objetos y no guarda cambios entre ejecuciones.
-No administra matrículas, calificaciones por asignatura ni autenticación. Son
-posibles ampliaciones futuras, pero no se presentan como funcionalidades
-implementadas. Los valores de demostración no son datos reales de estudiantes
+Administra matrículas dentro de cada grupo, pero no calificaciones por asignatura,
+cruces de horarios ni autenticación. Esas funciones quedan fuera de esta entrega. Los valores de demostración no son datos reales de estudiantes
 o trabajadores de la Universidad.

@@ -1,4 +1,33 @@
-# Aporte: actualización del avance académico
+# Aporte individual y evolución del proyecto
+
+**Estudiante responsable:** Hernan Felipe Astudillo Peña (`feliastu`).  
+**Modalidad:** individual.
+
+## Actividad 2
+
+La ampliación convierte Persona en abstracta y utiliza los objetos anteriores en
+GrupoAcademico. Incorpora Horario por composición, cinco excepciones específicas
+y CatalogoAcademico para las búsquedas. `main.py` mantiene la demostración de AC1
+y añade matrícula, retiro, consulta y recuperación ante errores.
+
+Commit de implementación: [0ade44c](https://github.com/feliastu/programacion-i-gestion-academica/commit/0ade44cd6e8a0fd51552c55f4c31849db0269373).
+
+La implementación está registrada en el historial de la segunda entrega:
+[commits de Entrega_AC2](https://github.com/feliastu/programacion-i-gestion-academica/commits/Entrega_AC2).
+El alcance comprende los modelos nuevos, la adaptación de Persona, la demostración
+y 26 pruebas nuevas, además de la documentación de diseño. Las 42 pruebas completas
+pasaron el 31 de octubre de 2026 con Python 3.12.14.
+
+Se utilizó ChatGPT para implementar, probar y documentar estos cambios a solicitud
+del estudiante. Este registro describe el trabajo técnico asistido y no certifica
+que la revisión o sustentación personal ya se haya realizado.
+
+El registro que sigue corresponde a AC1. Sus referencias a 16 pruebas y a la
+versión anterior son históricas; el resultado vigente está en [PRUEBAS.md](PRUEBAS.md).
+
+## Registro histórico de AC1
+
+### Actualización del avance académico
 
 **Estudiante responsable:** Hernan Felipe Astudillo Peña  
 **Modalidad:** individual  
