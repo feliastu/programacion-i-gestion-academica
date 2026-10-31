@@ -1,3 +1,29 @@
+test_asignatura_inexistente_lanza_excepcion_y_permite_buscar_despues (test_ac2.PruebasActividadDos.test_asignatura_inexistente_lanza_excepcion_y_permite_buscar_despues) ... ok
+test_busquedas_validas_devuelven_objetos_originales (test_ac2.PruebasActividadDos.test_busquedas_validas_devuelven_objetos_originales) ... ok
+test_cambio_de_horario_invalido_conserva_el_anterior (test_ac2.PruebasActividadDos.test_cambio_de_horario_invalido_conserva_el_anterior) ... ok
+test_catalogo_copia_las_listas_y_valida_los_objetos (test_ac2.PruebasActividadDos.test_catalogo_copia_las_listas_y_valida_los_objetos) ... ok
+test_catalogo_vacio_lanza_las_excepciones_correspondientes (test_ac2.PruebasActividadDos.test_catalogo_vacio_lanza_las_excepciones_correspondientes) ... ok
+test_demostracion_de_grupos_termina_con_estado_coherente (test_ac2.PruebasActividadDos.test_demostracion_de_grupos_termina_con_estado_coherente) ... ok
+test_duplicado_mismo_objeto_y_mismo_codigo_no_alteran_el_grupo (test_ac2.PruebasActividadDos.test_duplicado_mismo_objeto_y_mismo_codigo_no_alteran_el_grupo) ... ok
+test_excepciones_personalizadas_son_clases_propias (test_ac2.PruebasActividadDos.test_excepciones_personalizadas_son_clases_propias) ... ok
+test_exceso_de_capacidad_no_agrega_al_estudiante (test_ac2.PruebasActividadDos.test_exceso_de_capacidad_no_agrega_al_estudiante) ... ok
+test_grupo_consulta_los_objetos_asociados_actuales (test_ac2.PruebasActividadDos.test_grupo_consulta_los_objetos_asociados_actuales) ... ok
+test_grupo_vacio_se_puede_consultar_y_rechaza_retiro (test_ac2.PruebasActividadDos.test_grupo_vacio_se_puede_consultar_y_rechaza_retiro) ... ok
+test_grupo_valida_asociaciones_capacidad_y_codigo (test_ac2.PruebasActividadDos.test_grupo_valida_asociaciones_capacidad_y_codigo) ... ok
+test_grupos_comparten_asignatura_pero_tienen_horarios_propios (test_ac2.PruebasActividadDos.test_grupos_comparten_asignatura_pero_tienen_horarios_propios) ... ok
+test_horario_rechaza_dia_salon_formato_e_intervalos_invalidos (test_ac2.PruebasActividadDos.test_horario_rechaza_dia_salon_formato_e_intervalos_invalidos) ... ok
+test_horario_valido_y_campos_consultables (test_ac2.PruebasActividadDos.test_horario_valido_y_campos_consultables) ... ok
+test_lista_de_consulta_no_permite_modificar_matriculas (test_ac2.PruebasActividadDos.test_lista_de_consulta_no_permite_modificar_matriculas) ... ok
+test_main_captura_cada_excepcion_y_continua (test_ac2.PruebasActividadDos.test_main_captura_cada_excepcion_y_continua) ... ok
+test_matricula_correcta_conserva_referencia_y_ocupa_cupo (test_ac2.PruebasActividadDos.test_matricula_correcta_conserva_referencia_y_ocupa_cupo) ... ok
+test_matricula_rechaza_nombre_o_persona_de_otro_rol (test_ac2.PruebasActividadDos.test_matricula_rechaza_nombre_o_persona_de_otro_rol) ... ok
+test_matriculas_de_dos_grupos_son_independientes (test_ac2.PruebasActividadDos.test_matriculas_de_dos_grupos_son_independientes) ... ok
+test_persona_no_se_puede_instanciar (test_ac2.PruebasActividadDos.test_persona_no_se_puede_instanciar) ... ok
+test_programa_inexistente_lanza_excepcion_y_permite_buscar_despues (test_ac2.PruebasActividadDos.test_programa_inexistente_lanza_excepcion_y_permite_buscar_despues) ... ok
+test_retiro_devuelve_el_objeto_y_permite_otra_matricula (test_ac2.PruebasActividadDos.test_retiro_devuelve_el_objeto_y_permite_otra_matricula) ... ok
+test_retiro_inexistente_no_modifica_matriculas (test_ac2.PruebasActividadDos.test_retiro_inexistente_no_modifica_matriculas) ... ok
+test_subclase_sin_metodo_abstracto_no_se_puede_instanciar (test_ac2.PruebasActividadDos.test_subclase_sin_metodo_abstracto_no_se_puede_instanciar) ... ok
+test_subclases_concretas_conservan_comportamientos_distintos (test_ac2.PruebasActividadDos.test_subclases_concretas_conservan_comportamientos_distintos) ... ok
 test_actualizacion_conjunta_acepta_valores_validos_y_limites (test_sistema.PruebasSistema.test_actualizacion_conjunta_acepta_valores_validos_y_limites) ... ok
 test_actualizacion_conjunta_rechaza_promedio_sin_cambiar_semestre (test_sistema.PruebasSistema.test_actualizacion_conjunta_rechaza_promedio_sin_cambiar_semestre) ... ok
 test_actualizacion_conjunta_rechaza_semestre_sin_cambiar_datos (test_sistema.PruebasSistema.test_actualizacion_conjunta_rechaza_semestre_sin_cambiar_datos) ... ok
@@ -16,6 +42,6 @@ test_seis_personas_dos_por_tipo_y_herencia (test_sistema.PruebasSistema.test_sei
 test_semestres_invalidos_conservan_dato_anterior (test_sistema.PruebasSistema.test_semestres_invalidos_conservan_dato_anterior) ... ok
 
 ----------------------------------------------------------------------
-Ran 16 tests in 0.001s
+Ran 42 tests in 0.003s
 
 OK

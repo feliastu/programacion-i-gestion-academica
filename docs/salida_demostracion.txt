@@ -110,3 +110,67 @@ Cargo: Auxiliar
 Jornada: Mixta
 Actividad principal: Andrés Mora desempeña el cargo de Auxiliar en Biblioteca.
 
+
+6. CLASE ABSTRACTA Y OFERTA DE GRUPOS
+
+CONTROLADO - PersonaAbstracta: no se puede crear Persona; se debe elegir Estudiante, Docente o Administrativo.
+CONTINÚA: se crean dos grupos con horarios propios.
+
+Grupo: PROG1-A
+Asignatura: PROG1 - Programación I
+Docente: Laura Méndez
+Capacidad máxima: 1
+Matriculados: 0
+Cupos disponibles: 1
+Horario: Lunes, 08:00 a 10:00, salón A101
+No hay estudiantes matriculados. 
+
+Grupo: PROG1-B
+Asignatura: PROG1 - Programación I
+Docente: Julián Vega
+Capacidad máxima: 2
+Matriculados: 0
+Cupos disponibles: 2
+Horario: Miércoles, 14:00 a 16:00, salón B202
+No hay estudiantes matriculados. 
+
+7. MATRÍCULA Y RETIRO CON EXCEPCIONES PERSONALIZADAS
+
+MATRÍCULA CORRECTA: EST001 en PROG1-A y EST002 en PROG1-B.
+CONTROLADO - EstudianteYaMatriculadoError: El estudiante EST001 ya está matriculado en PROG1-A.
+CONTINÚA: PROG1-A conserva 1 matrícula.
+CONTROLADO - CapacidadMaximaError: El grupo PROG1-A alcanzó su capacidad máxima de 1 estudiantes.
+CONTINÚA: PROG1-A conserva 0 cupos libres.
+RETIRO CORRECTO: EST001 de PROG1-A.
+Cupos después del retiro: 1
+CONTROLADO - EstudianteNoMatriculadoError: El estudiante EST999 no está matriculado en PROG1-A.
+CONTINÚA: el cupo liberado permite matricular a EST002.
+
+8. BÚSQUEDAS EN EL CATÁLOGO
+
+CONTROLADO - AsignaturaNoEncontradaError: No existe la asignatura ASIG999.
+CONTINÚA: asignatura válida: Programación I
+CONTROLADO - ProgramaNoEncontradoError: No existe el programa PROG999.
+CONTINÚA: programa válido: Ingeniería en Analítica de Datos
+
+9. ESTADO FINAL DE LOS GRUPOS
+
+Grupo: PROG1-A
+Asignatura: PROG1 - Programación I
+Docente: Laura Méndez
+Capacidad máxima: 1
+Matriculados: 1
+Cupos disponibles: 0
+Horario: Lunes, 08:00 a 10:00, salón A101
+EST002 - Carlos Ríos 
+
+Grupo: PROG1-B
+Asignatura: PROG1 - Programación I
+Docente: Julián Vega
+Capacidad máxima: 2
+Matriculados: 1
+Cupos disponibles: 1
+Horario: Miércoles, 14:00 a 16:00, salón B202
+EST002 - Carlos Ríos 
+
+FIN: demostración completada después de controlar todas las excepciones.

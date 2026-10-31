@@ -43,7 +43,9 @@ class PruebasSistema(unittest.TestCase):
             self.assertIsInstance(persona, Persona)
 
     def test_constructores_y_campos_requeridos(self):
-        persona = Persona("P001", "Persona de ejemplo", "persona@example.com")
+        # En AC2 los campos comunes se consultan desde una subclase concreta.
+        persona = Administrativo("P001", "Persona de ejemplo", "persona@example.com",
+                                 "ADM099", "Registro", "Auxiliar", "Diurna")
         self.assertEqual(persona.get_identificacion(), "P001")
         self.assertEqual(persona.get_nombre(), "Persona de ejemplo")
         self.assertEqual(persona.get_correo(), "persona@example.com")
@@ -100,7 +102,8 @@ class PruebasSistema(unittest.TestCase):
 
     def test_constructores_rechazan_datos_invalidos(self):
         with self.assertRaises(ValueError):
-            Persona("P001", "Nombre", "")
+            Administrativo("P001", "Nombre", "", "ADM099", "Registro",
+                           "Auxiliar", "Diurna")
         with self.assertRaises(ValueError):
             ProgramaAcademico("P", "Programa", "Facultad", 0)
         with self.assertRaises(ValueError):

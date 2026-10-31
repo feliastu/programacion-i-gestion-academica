@@ -1,10 +1,12 @@
 """Información común a estudiantes, docentes y administrativos."""
 
+from abc import ABC, abstractmethod
+
 from modelos.validaciones import validar_texto
 
 
-class Persona:
-    """Centraliza los datos generales y sus métodos de acceso."""
+class Persona(ABC):
+    """Base abstracta con los datos comunes y un contrato para cada rol."""
 
     def __init__(self, identificacion, nombre, correo):
         # El constructor reutiliza las validaciones de los setters.
@@ -37,6 +39,7 @@ class Persona:
                 f"Nombre: {self.__nombre}\n"
                 f"Correo: {self.__correo}")
 
+    @abstractmethod
     def realizar_actividad_principal(self):
-        """Comportamiento general que cada subclase sobrescribe."""
-        return f"{self.__nombre} participa en la comunidad académica."
+        """Cada subclase concreta debe definir la actividad de su rol."""
+        pass
